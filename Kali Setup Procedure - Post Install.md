@@ -72,7 +72,7 @@ ls
 
 ### Install: OpenVas Scanner
 
-
+<br/><br/>
 :: Installation
 
 ```powershell
@@ -161,9 +161,10 @@ gvmd —version
 <br/><br/>
 
 :: Access GVM Web Interface
-
+<br/>
 URL: https://127.0.0.1:9392
-<br/><br/><br/>
+<br/><br/>
+
 :: Remove GVM
 
 ```powershell
@@ -196,6 +197,8 @@ sudo rm -rf /var/log/gvm/
 ```powershell
 sudo rm -rf /var/lib/gvm/
 ```
+
+
 
 
 
