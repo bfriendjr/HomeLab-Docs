@@ -21,16 +21,16 @@ sudo mkdir /mnt/proc
 sudo mkdir -p /mnt/sys/firmware/efi/efivars
 ```
 ```powershell
-sudo mount -—bind /dev /mnt/dev
+sudo mount --bind /dev /mnt/dev
 ```
 ```powershell
-sudo mount -—bind /proc /mnt/proc
+sudo mount --bind /proc /mnt/proc
 ```
 ```powershell
-sudo mount -—bind /sys /mnt/sys
+sudo mount --bind /sys /mnt/sys
 ```
 ```powershell
-sudo mount -—bind /sys/firmware/efi/efivars /mnt/sys/firmware/efi/efivars
+sudo mount --bind /sys/firmware/efi/efivars /mnt/sys/firmware/efi/efivars
 ```
 ```powershell
 sudo mkdir -p /mnt/boot/efi
@@ -48,7 +48,7 @@ sudo mount -o remount,rw /dev/sda+ /mnt/boot/efi
 sudo mkdir /mnt/hostrun
 ```
 ```powershell
-sudo mount -—bind /run /mnt/hostrun
+sudo mount --bind /run /mnt/hostrun
 ```
 ```powershell
 sudo chroot /mnt
