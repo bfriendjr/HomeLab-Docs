@@ -54,16 +54,19 @@ sudo mount --bind /run /mnt/hostrun
 sudo chroot /mnt
 ```
 ```powershell
-sudo mkdir /run/lvm
+mkdir /run/lvm
 ```
 ```powershell
 mount —-bind /hostrun/lvm /run/lvm
 ```
 ```powershell
-sudo grub-install /dev/sda
+grub-install /dev/sda
 ```
 ```powershell
-sudo update-grub
+update-grub
+```
+```powershell
+exit
 ```
 ```powershell
 exit
