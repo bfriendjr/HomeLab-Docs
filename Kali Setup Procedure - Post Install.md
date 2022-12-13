@@ -37,7 +37,8 @@ ls
 
 :: Create new ssh keys.
 
-`sudo dpkg-reconfigure openssh-server
+```powershell
+sudo dpkg-reconfigure openssh-server
 ```
 
 
@@ -65,6 +66,112 @@ sudo rm -r old_keys
 ```powershell
 ls
 ```
+<br>
+<br>
+<br>
+
+### Install: OpenVas Scanner
+
+
+:: Installation
+
+```powershell
+sudo apt-get install openvas
+```
+
+
+:: On a fresh install, note the password displayed at the end of the setup. You will need it to connect you to the Web UI GSA (greenbone-security-assistant)
+
+```powershell
+sudo gvm-setup
+```
+
+
+
+:: To update the data (CERT, SCAP, GVMD_DATA) from the feed server and to update the OpenVAS NVTs from Community Feed
+
+```powershell
+sudo gvm-feed-update
+```
+
+
+:: It will check the setup and start the all the required services if everything is OK. You can now open your browser on https://127.0.0.1:9392 and use GVM.
+
+```powershell
+sudo gvm-check-setup
+```
+
+
+:: To create a new gvm system user
+```powershell
+sudo runuser -u _gvm — gvmd —create-user=ironman —password=ICanFly2
+```
+
+
+:: Create a new user with Admin role permissions.
+```powershell
+sudo gvmd —create-user= ironman —password=ICanFly2 —role=Admin
+sudo gvmd —inheritor= ironman
+gvmd —delete-user=admin
+```
+
+
+:: To reset the admin password
+```powershell
+sudo -u _gvm gvmd —user=admin —new-password=<AdminPassword>
+```
+
+:: To reset the user password
+```powershell
+sudo runuser -u _gvm — gvmd —create-user=<UserName> —new-password=<UserPassword>
+```
+
+
+:: To start the GVM services, use:
+
+```
+sudo gvm-start
+```
+
+
+:: To stop the GVM services, use:
+
+```powershell
+sudo gvm-stop
+```
+
+
+:: GVM Versions Info
+
+```powershell
+gvmd —version
+```
+
+:: Access GVM Web Interface
+URL: https://127.0.0.1:9392
+
+:: Remove GVM
+```powershell
+sudo apt autoremove openvas*
+sudo apt-get purge openvas*
+sudo apt-get purge openvas9*
+sudo apt-get purge openvas*
+sudo apt-get purge libopenvas9
+sudo apt-get purge libopenvas9-dev
+sudo apt autoremove
+sudo rm -rf /var/lib/openvas/
+sudo rm -rf /var/log/gvm/
+sudo rm -rf /var/lib/gvm/
+```
+
+
+
+
+
+
+
+
+
 <br>
 <br>
 <br>
