@@ -78,96 +78,111 @@ ls
 ```powershell
 sudo apt-get install openvas
 ```
-
+<br/><br/>
 
 :: On a fresh install, note the password displayed at the end of the setup. You will need it to connect you to the Web UI GSA (greenbone-security-assistant)
 
 ```powershell
 sudo gvm-setup
 ```
-
-
+<br/><br/>
 
 :: To update the data (CERT, SCAP, GVMD_DATA) from the feed server and to update the OpenVAS NVTs from Community Feed
 
 ```powershell
 sudo gvm-feed-update
 ```
-
+<br/><br/>
 
 :: It will check the setup and start the all the required services if everything is OK. You can now open your browser on https://127.0.0.1:9392 and use GVM.
 
 ```powershell
 sudo gvm-check-setup
 ```
+<br/><br/>
 
+:: Reset the admin password
 
-:: To create a new gvm system user
-```powershell
-sudo runuser -u _gvm — gvmd —create-user=ironman —password=ICanFly2
-```
-
-
-:: Create a new user with Admin role permissions.
-```powershell
-sudo gvmd —create-user= ironman —password=ICanFly2 —role=Admin
-sudo gvmd —inheritor= ironman
-gvmd —delete-user=admin
-```
-
-
-:: To reset the admin password
 ```powershell
 sudo -u _gvm gvmd —user=admin —new-password=<AdminPassword>
 ```
+<br/><br/>
 
-:: To reset the user password
+:: To create a new gvm system user
+
+```powershell
+sudo runuser -u _gvm — gvmd —create-user=<UserName> —password=<UserPassword>
+```
+<br/><br/>
+
+:: Create a new user with Admin role permissions.
+
+```powershell
+sudo gvmd —create-user=<UserName> —password=<UserPassword> —role=Admin
+```
+```powershell
+sudo gvmd —inheritor=<UserName>
+```
+<br/><br/>
+
+:: Deleted admin Account
+
+```powershell
+sudo gvmd —delete-user=admin
+```
+<br/><br/>
+
+:: Reset the user password
+
 ```powershell
 sudo runuser -u _gvm — gvmd —create-user=<UserName> —new-password=<UserPassword>
 ```
-
+<br/><br/>
 
 :: To start the GVM services, use:
 
-```
+```powershell
 sudo gvm-start
 ```
-
+<br/><br/>
 
 :: To stop the GVM services, use:
 
 ```powershell
 sudo gvm-stop
 ```
-
+<br/><br/>
 
 :: GVM Versions Info
 
 ```powershell
 gvmd —version
 ```
+<br/><br/>
 
 :: Access GVM Web Interface
-URL: https://127.0.0.1:9392
 
+URL: https://127.0.0.1:9392
+<br/><br/><br/>
 :: Remove GVM
+
 ```powershell
 sudo apt autoremove openvas*
 ```
 ```powershell
-sudo apt-get purge openvas*
+sudo apt-get remove --purge openvas*
 ```
 ```powershell
-sudo apt-get purge openvas9*
+sudo apt-get remove --purge openvas9*
 ```
 ```powershell
-sudo apt-get purge openvas*
+sudo apt-get remove --purge openvas*
 ```
 ```powershell
-sudo apt-get purge libopenvas9
+sudo apt-get remove --purge libopenvas9
 ```
 ```powershell
-sudo apt-get purge libopenvas9-dev
+sudo apt-get remove --purge libopenvas9-dev
 ```
 ```powershell
 sudo apt autoremove
