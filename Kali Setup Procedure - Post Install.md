@@ -13,43 +13,58 @@
 
 :: Change to dir where ssh keys are located
 
-`cd /etc/ssh`
+```powershell
+cd /etc/ssh
+```
 
 :: Make folder to backup original ssh keys.
 
-`sudo mkdir old_keys`
+```powershell
+sudo mkdir old_keys
+```
 
 :: Move original ssh keys to the backup location.
 
-`sudo mv ssh_host_* old_keys`
+```powershell
+sudo mv ssh_host_* old_keys
+```
 
 :: Verify that the original ssh keys have been relocated.
 
-`ls`
+```powershell
+ls
+```
 
 :: Create new ssh keys.
 
-`sudo dpkg-reconfigure openssh-server`
+`sudo dpkg-reconfigure openssh-server
+```
 
 
 :: Verify that the new ssh keys have been created.
 
-`ls`
+```powershell
+ls
+```
 
 :: Confirm that the new ssh keys have a different md5 hash from the originals
 
-```shell
+```powershell
 sudo md5sum ssh_host_*
 sudo md5sum /etc/ssh/old_keys/ssh_host_*
 ```
 
 :: Remove old ssh keys.
 
-`sudo rm -r old_keys`
+```powershell
+sudo rm -r old_keys
+```
 
 :: Confirm the “old_keys” directory is gone
 
-`ls`
+```powershell
+ls
+```
 <br>
 <br>
 <br>
