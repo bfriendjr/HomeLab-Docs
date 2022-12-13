@@ -38,7 +38,7 @@
 
 :: Confirm that the new ssh keys have a different md5 hash from the originals
 
-```powershell
+```shell
 sudo md5sum ssh_host_*
 sudo md5sum /etc/ssh/old_keys/ssh_host_*
 ```
@@ -54,5 +54,8 @@ sudo md5sum /etc/ssh/old_keys/ssh_host_*
 <br>
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
 #HomeLab/Kali
