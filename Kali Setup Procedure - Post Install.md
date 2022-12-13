@@ -153,14 +153,32 @@ URL: https://127.0.0.1:9392
 :: Remove GVM
 ```powershell
 sudo apt autoremove openvas*
+```
+```powershell
 sudo apt-get purge openvas*
+```
+```powershell
 sudo apt-get purge openvas9*
+```
+```powershell
 sudo apt-get purge openvas*
+```
+```powershell
 sudo apt-get purge libopenvas9
+```
+```powershell
 sudo apt-get purge libopenvas9-dev
+```
+```powershell
 sudo apt autoremove
+```
+```powershell
 sudo rm -rf /var/lib/openvas/
+```
+```powershell
 sudo rm -rf /var/log/gvm/
+```
+```powershell
 sudo rm -rf /var/lib/gvm/
 ```
 
