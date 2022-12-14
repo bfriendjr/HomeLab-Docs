@@ -1,4 +1,4 @@
-# # Grub Boot EFI Fix
+# Grub Boot EFI Fix
 
 You can skip installation of grub.
 
@@ -8,15 +8,26 @@ After your installation is complete boot into kali-live and run these commands:
 ```powershell
 sudo -i passwd root
 ```
+<br/>
+
+Replace "*" with the partition number of your Linux filesystem. (Ex: sda3)
 ```powershell
 sudo mount /dev/sda* /mnt
 ```
+<br/>
+
+This directory could possibly exist.
 ```powershell
 sudo mkdir /mnt/dev
 ```
+<br/>
+
+This directory could possibly exist.
 ```powershell
 sudo mkdir /mnt/proc
 ```
+<br/>
+
 ```powershell
 sudo mkdir -p /mnt/sys/firmware/efi/efivars
 ```
@@ -38,12 +49,20 @@ sudo mkdir -p /mnt/boot/efi
 ```powershell
 su root
 ```
+<br/>
+
+Replace "+" with the partition number of your EFI boot partition. (Ex: sda1)
 ```powershell
 sudo mount /dev/sda+ /mnt/boot/efi
 ```
+<br/>
+
+Replace "+" with the partition number of your EFI boot partition. (Ex: sda1)
 ```powershell
 sudo mount -o remount,rw /dev/sda+ /mnt/boot/efi
 ```
+<br/>
+
 ```powershell
 sudo mkdir /mnt/hostrun
 ```
@@ -57,11 +76,16 @@ sudo chroot /mnt
 mkdir /run/lvm
 ```
 ```powershell
-mount —-bind /hostrun/lvm /run/lvm
+mount --bind /hostrun/lvm /run/lvm
 ```
+<br/>
+
+There may be some errors displayed here. They can be ignored.
 ```powershell
 grub-install /dev/sda
 ```
+<br/>
+
 ```powershell
 update-grub
 ```
