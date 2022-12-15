@@ -86,12 +86,12 @@ sudo nano /etc/apt/sources.list
 <br/>
 
 ```powershell
-sudo apt-get update && apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 ```
 <br/>
 
 ```powershell
-sudo apt-get upgrade --fix-missing -y && apt-get upgrade --fix-broken -y
+sudo apt-get upgrade --fix-missing -y && sudo apt-get upgrade --fix-broken -y
 ```
 <br/>
 
@@ -101,7 +101,7 @@ sudo apt-get dist-upgrade -y
 <br/>
 
 ```powershell
-sudo apt-get dist-upgrade --fix-missing -y && apt-get dist-upgrade --fix-broken -y
+sudo apt-get dist-upgrade --fix-missing -y && sudo apt-get dist-upgrade --fix-broken -y
 ```
 
 <br/><br/><br/>
@@ -156,6 +156,7 @@ HandleLidSwitchDocked=ignore
 
 <br/><br/><br/>
 ## Alfa AWUS036ACH External WiFi Adapter - Install Driver:
+<br/>
 
 :: Install
 ```powershell
@@ -177,11 +178,16 @@ git clone https://github.com/morrownr/8812au-20210629.git
 ```powershell
 cd ~/src/8812au-20210629
 ```
+<br/>
 
+Go with all default options when asked.
 ```powershell
 sudo ./install-driver.sh
 ```
-
+<br/>
+Reboot
+<br/><br/>
+Plug in WiFi adapter
 
 
 
