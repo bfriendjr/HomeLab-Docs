@@ -82,6 +82,9 @@ sudo nano /etc/apt/sources.list
 
 ## Update System:
 
+#### -- Run as root --
+<br/>
+
 ```powershell
 sudo apt-get update && apt-get upgrade -y
 ```
@@ -105,6 +108,10 @@ sudo apt-get dist-upgrade --fix-missing -y && apt-get dist-upgrade --fix-broken 
 
 ## Remove orphaned “apt-get” packages dependencies & clears out local repository of retrieved package files:
 
+#### -- Run as root --
+<br/>
+
+
 ```powershell
 sudo apt autoremove
 ```
@@ -119,6 +126,64 @@ sudo apt-get clean
 ```powershell
 sudo apt-get install git
 ```
+<br/><br/><br/>
+## Macbook - Install WiFi Adapter B43 Firmware:
+<br/>
+This is required inorder for the internal WiFi adapter to work.
+
+```powershell
+sudo apt-get install firmware-b43-installer
+```
+<br/><br/><br/>
+
+## Macbook - Disable Lid Switch:
+<br/>
+This will prevent the machine from shutting down or going to sleep when the lid is closed.
+<br/><br/>
+
+```powershell
+sudo nano /etc/systemd/logind.conf
+```
+<br/><br/>
+Uncomment the following configurations and set to "ignore".
+
+```powershell
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+HandleLidSwitchDocked=ignore
+```
+
+
+<br/><br/><br/>
+## Alfa AWUS036ACH External WiFi Adapter - Install Driver:
+
+:: Install
+```powershell
+sudo apt install -y linux-headers-$(uname -r) build-essential bc dkms git libelf-dev
+```
+
+```powershell
+mkdir -p ~/src
+```
+
+```powershell
+cd ~/src
+```
+
+```powershell
+git clone https://github.com/morrownr/8812au-20210629.git
+```
+
+```powershell
+cd ~/src/8812au-20210629
+```
+
+```powershell
+sudo ./install-driver.sh
+```
+
+
+
 
 
 <br/><br/><br/>
@@ -145,6 +210,8 @@ sudo apt install wget
 :: Google “vs code download”<br/>
 :: Choose Debian architecture<br/>
 :: Open terminal in Download folder<br/><br/>
+
+The file name may be different than shown below in the command line.
 
 :: Install
 ```powershell
@@ -210,6 +277,8 @@ cd terminator
 
 
 ## Install: OpenVas Scanner
+
+#### -- Install and run as root --
 
 <br/><br/>
 :: Installation
