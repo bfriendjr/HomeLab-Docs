@@ -1,17 +1,18 @@
 # Kali Setup Procedure - Post Install
 
+These are the steps I do on a fresh Kali install. Some of the steps are specific to my Macbook.
 
 <br/><br/><br/>
 
 
-## Change Root Password:
+## <span style="color:blue"> Change Root Password: </style>
 
 ```powershell
 sudo -i passwd root
 ```
 <br/><br/><br/>
 
-## Create new SSH Keys:
+## <span style="color:blue"> Create new SSH Keys: </style>
 
 :: Change to dir where ssh keys are located
 
@@ -72,7 +73,7 @@ ls
 ```
 <br/><br/><br/>
 
-## Uncomment both sources:
+## <span style="color:blue"> Uncomment both sources:  </style>
 
 ```powershell
 sudo nano /etc/apt/sources.list
@@ -80,9 +81,9 @@ sudo nano /etc/apt/sources.list
 
 <br/><br/><br/>
 
-## Update System:
+## <span style="color:blue"> Update System: </style>
 
-#### -- Run as root --
+#### <span style="color:red"> -- Run as root -- </style>
 <br/>
 
 ```powershell
@@ -106,9 +107,9 @@ sudo apt-get dist-upgrade --fix-missing -y && sudo apt-get dist-upgrade --fix-br
 
 <br/><br/><br/>
 
-## Remove orphaned “apt-get” packages dependencies & clears out local repository of retrieved package files:
+## <span style="color:blue"> Remove orphaned “apt-get” packages dependencies & clears out local repository of retrieved package files: </style>
 
-#### -- Run as root --
+#### <span style="color:red"> -- Run as root -- </style>
 <br/>
 
 
@@ -120,14 +121,44 @@ sudo apt-get clean
 ```
 
 <br/><br/><br/>
-## Install Git Repository:
+## <span style="color:blue"> Install Git Repository: </style>
 
 :: Install
 ```powershell
 sudo apt-get install git
 ```
 <br/><br/><br/>
-## Macbook - Install WiFi Adapter B43 Firmware:
+
+## <span style="color:blue"> Install GDebi Package Manager: </style>
+
+:: Install
+```powershell
+sudo apt-get install gdebi
+```
+
+<br/><br/><br/>
+
+## <span style="color:blue"> Install WGET Package Manager: </style>
+
+:: Install
+```powershell
+sudo apt install wget
+```
+
+
+<br/><br/><br/>
+
+## <span style="color:blue"> Install File-Roller Archive Manager: </style>
+
+:: Install
+```powershell
+sudo apt-get install unrar unace unrar p7zip zip unzip p7zip-full p7zip-rar file-roller -y
+```
+
+
+
+<br/><br/><br/>
+## <span style="color:blue"> Macbook - Install WiFi Adapter B43 Firmware: </style>
 <br/>
 This is required inorder for the internal WiFi adapter to work.
 
@@ -136,7 +167,7 @@ sudo apt-get install firmware-b43-installer
 ```
 <br/><br/><br/>
 
-## Macbook - Disable Lid Switch:
+## <span style="color:blue"> Macbook - Disable Lid Switch: </style>
 <br/>
 This will prevent the machine from shutting down or going to sleep when the lid is closed.
 <br/><br/>
@@ -155,7 +186,7 @@ HandleLidSwitchDocked=ignore
 
 
 <br/><br/><br/>
-## Alfa AWUS036ACH External WiFi Adapter - Install Driver:
+## <span style="color:blue"> Alfa AWUS036ACH External WiFi Adapter - Install Driver: </style>
 <br/>
 
 :: Install
@@ -193,25 +224,9 @@ Plug in WiFi adapter
 
 
 <br/><br/><br/>
-## Install GDebi Package Manager:
 
-:: Install
-```powershell
-sudo apt-get install gdebi
-```
 
-<br/><br/><br/>
-
-## Install WGET Package Manager:
-
-:: Install
-```powershell
-sudo apt install wget
-```
-
-<br/><br/><br/>
-
-## Install Visual Studio Code:
+## <span style="color:blue"> Install Visual Studio Code: </style>
 
 :: Google “vs code download”<br/>
 :: Choose Debian architecture<br/>
@@ -227,7 +242,7 @@ sudo apt install ./code_1.74.0-1670260027_amd64.deb
 <br/><br/><br/>
 
 
-## Install Tor Browser:
+## <span style="color:blue"> Install Tor Browser: </style>
 
 :: Install
 ```powershell
@@ -245,7 +260,7 @@ torbrowser-launcher
 <br/><br/><br/>
 
 
-## Install Konsole Multiplexer:
+## <span style="color:blue"> Install Konsole Multiplexer: </style>
 
 :: Install
 ```powershell
@@ -254,7 +269,7 @@ sudo apt-get install konsole -y
 
 <br/><br/><br/>
 
-## Install a terminator multiplexer:
+## <span style="color:blue"> Install a terminator multiplexer: </style>
 
 :: Install Terminator
 ```powershell
@@ -265,6 +280,10 @@ sudo apt install terminator -y
 Install Git Repository if not installed
 
 Cool Themes: https://draculatheme.com/terminator
+
+```powershell
+cd ~/
+```
 ```powershell
 git clone https://github.com/dracula/terminator.git
 ```
@@ -282,9 +301,9 @@ cd terminator
 
 
 
-## Install: OpenVas Scanner
+## <span style="color:blue"> Install: OpenVas Scanner </style>
 
-#### -- Install and run as root --
+#### <span style="color:red"> -- Install and run as root -- </style>
 
 <br/><br/>
 :: Installation
@@ -325,7 +344,7 @@ sudo -u _gvm gvmd --user=admin --new-password=<AdminPassword>
 :: To create a new gvm system user
 
 ```powershell
-sudo runuser -u _gvm -- gvmd --create-user=<UserName> —password=<UserPassword>
+sudo runuser -u _gvm -- gvmd --create-user=<UserName> --password=<UserPassword>
 ```
 <br/>
 
@@ -349,7 +368,7 @@ sudo gvmd --delete-user=admin
 :: Reset the user password
 
 ```powershell
-sudo runuser -u _gvm -- gvmd --create-user=<UserName> —new-password=<UserPassword>
+sudo runuser -u _gvm -- gvmd --create-user=<UserName> --new-password=<UserPassword>
 ```
 <br/>
 
@@ -414,7 +433,7 @@ sudo rm -rf /var/lib/gvm/
 
 <br/><br/><br/>
 
-## Install HTOP interactive process viewer:
+## <span style="color:blue"> Install HTOP interactive process viewer: </style>
 
 :: Install HTOP and suggested packages
 ```powershell
@@ -439,7 +458,7 @@ control-z
 
 <br/><br/><br/>
 
-## Install Python:
+## <span style="color:blue"> Install Python: </style>
 
 :: Install
 Look into installing the latest version
@@ -447,7 +466,7 @@ Look into installing the latest version
 
 <br/><br/><br/>
 
-## Install Java:
+## <span style="color:blue"> Install Java: </style>
 
 :: Install
 ```powershell
@@ -456,16 +475,8 @@ sudo apt install default-jdk
 
 <br/><br/><br/>
 
-## Install File-Roller Archive Manager:
 
-:: Install
-```powershell
-sudo apt-get install unrar unace unrar p7zip zip unzip p7zip-full p7zip-rar file-roller -y
-```
-
-<br/><br/><br/>
-
-## Install VLC Media Player:
+## <span style="color:blue"> Install VLC Media Player: </style>
 
 :: Install
 ```powershell
@@ -473,15 +484,10 @@ sudo apt install vlc
 ```
 
 
-
-
-
-
-
 <br/><br/><br/>
 
 
-## Install Lee Barid Discover Script (Automates several passive and active penetration testing tasks):
+## <span style="color:blue"> Install Lee Barid Discover Script (Automates several passive and active penetration testing tasks): </style>
 
 :: Source
 https://alphacybersecurity.tech/how-to-install-tools-to-kali-linux/
@@ -490,10 +496,10 @@ https://alphacybersecurity.tech/how-to-install-tools-to-kali-linux/
 This will be installed in the root of the user folder
 <br/><br/>
 
-#### -- Install and run as root --
+#### <span style="color:red"> -- Install and run as root -- </style>
 
 ```
-sudo apt-get update && apt-get upgrade
+sudo apt-get update && sudo apt-get upgrade
 ```
 ```
 sudo git clone https://github.com/leebaird/discover.git
@@ -513,7 +519,7 @@ cd discover
 
 <br/><br/><br/>
 
-## Install Google Chrome:
+## <span style="color:blue"> Install Google Chrome: </style>
 
 :: Install
 Follow Google’s instructions on the web.
@@ -527,7 +533,7 @@ cd ~/Downloads
 sudo wget  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 ```
 ```powershell
-sudo dpkg -I google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 ```powershell
 google-chrome
@@ -590,7 +596,7 @@ dpkg -list | grep google
 
 <br/><br/><br/>
 
-## Install Daniel Miessler’s SecLists (One of the more popular wordlists)
+## <span style="color:blue"> Install Daniel Miessler’s SecLists (One of the more popular wordlists) </style>
 
 :: Source
 https://alphacybersecurity.tech/how-to-install-tools-to-kali-linux/
@@ -619,7 +625,7 @@ sudo apt -y install seclists
 <br/><br/><br/>
 
 
-## Install: Seahorse (Password & Key Manager)
+## <span style="color:blue"> Install: Seahorse (Password & Key Manager) </style>
 
 :: Install
 ```powershell
@@ -628,7 +634,7 @@ sudo apt-get install seahorse -y
 
 <br/><br/><br/>
 
-## Install: tilix (Multiplexer)
+## <span style="color:blue"> Install: tilix (Multiplexer) </style>
 
 :: Install
 ```powershell
@@ -638,7 +644,7 @@ sudo apt-get install tilix -y
 <br/><br/><br/>
 
 
-## Create another SUDO user:
+## <span style="color:blue"> Create another SUDO user: </style>
 
 :: Add new user “<New User Name / New User Password>”
 ```powershell
@@ -657,6 +663,81 @@ sudo usermod -a -G sudo <New User Name>
 su <New User Name>
 ```
 <br/><br/><br/>
+
+## <span style="color:blue"> Install Macbook Fan Daemon </style>
+
+mbpfan is a daemon that uses input from coretemp module and sets the fan speed using the applesmc module.
+This enhanced version assumes any number of processors and fans (max. 10).
+
+* It only uses the temperatures from the processors as input.
+* It requires coretemp and applesmc kernel modules to be loaded.
+* It requires root use
+* It daemonizes or stays in foreground
+* Verbose mode for both syslog and stdout
+* Users can configure it using the file /etc/mbpfan.conf
+<br/><br/>
+
+:: Requirements
+
+Be sure to load the kernel modules **applesmc** and **coretemp**.
+
+These modules are often automatically loaded when booting up GNU/Linux on a MacBook. If that is not the case, you should make sure to load them at system startup.
+
+**How do I know if applesmc and coretemp are loaded?**
+
+In most distributions, you can run the following command:
+
+```bash
+lsmod | grep -e applesmc -e coretemp
+```
+
+If you see `coretemp` and `applesmc` listed, you are all set.
+
+**If you do not see `coretemp` and `applesmc` listed, you must load them.**
+
+This is _usually_ achieved by inserting the following two lines in the file `/etc/modules`
+
+```powershell
+coretemp
+applesmc
+```
+<br/><br/>
+
+:: Installation
+
+```powershell
+sudo apt-get install mbpfan
+```
+<br/><br/>
+:: Run Instructions
+<br/><br/>
+If not installed, run with
+
+   `sudo bin/mbpfan`
+<br/><br/>
+If installed, manually run with
+
+`sudo mbpfan`
+<br/><br/>
+If installed and using the init file, run with (Ubuntu example)
+
+`sudo service mbpfan start`
+
+<br/><br/>
+
+:: Starting at boot
+
+An init file suitable for /lib/lsb/init-functions (Debian)
+is located in the main folder of the source files, called mbpfan.init.debian
+Rename it to mbpfan, give it execution permissions (chmod +x mbpfan)
+and move it to /etc/init.d
+Then, add it to the default runlevels with (as root):
+
+`sudo update-rc.d mbpfan defaults`
+
+<br/><br/><br/>
+
+##
 
 
 #HomeLab/Kali
