@@ -5,14 +5,14 @@ These are the steps I do on a fresh Kali install. Some of the steps are specific
 <br/><br/><br/>
 
 
-## <span style="color:blue"> Change Root Password: </style>
+## @@ Change Root Password: @@
 
 ```powershell
 sudo -i passwd root
 ```
 <br/><br/><br/>
 
-## <span style="color:blue"> Create new SSH Keys: </style>
+## <span style="color:blue"> Create new SSH Keys:
 
 :: Change to dir where ssh keys are located
 
