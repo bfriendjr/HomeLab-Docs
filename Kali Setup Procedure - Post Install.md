@@ -5,14 +5,14 @@ These are the steps I do on a fresh Kali install. Some of the steps are specific
 <br/><br/><br/>
 
 
-## @@ Change Root Password: @@
+## Change Root Password:
 
 ```powershell
 sudo -i passwd root
 ```
 <br/><br/><br/>
 
-## <span style="color:blue"> Create new SSH Keys:
+## Create new SSH Keys:
 
 :: Change to dir where ssh keys are located
 
@@ -73,7 +73,7 @@ ls
 ```
 <br/><br/><br/>
 
-## <span style="color:blue"> Uncomment both sources:  </style>
+## Uncomment both sources: 
 
 ```powershell
 sudo nano /etc/apt/sources.list
@@ -81,9 +81,9 @@ sudo nano /etc/apt/sources.list
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Update System: </style>
+## Update System:
 
-#### <span style="color:red"> -- Run as root -- </style>
+#### -- Run as root --
 <br/>
 
 ```powershell
@@ -107,9 +107,9 @@ sudo apt-get dist-upgrade --fix-missing -y && sudo apt-get dist-upgrade --fix-br
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Remove orphaned “apt-get” packages dependencies & clears out local repository of retrieved package files: </style>
+## Remove orphaned “apt-get” packages dependencies & clears out local repository of retrieved package files:
 
-#### <span style="color:red"> -- Run as root -- </style>
+#### -- Run as root --
 <br/>
 
 
@@ -121,7 +121,7 @@ sudo apt-get clean
 ```
 
 <br/><br/><br/>
-## <span style="color:blue"> Install Git Repository: </style>
+## Install Git Repository:
 
 :: Install
 ```powershell
@@ -129,7 +129,7 @@ sudo apt-get install git
 ```
 <br/><br/><br/>
 
-## <span style="color:blue"> Install GDebi Package Manager: </style>
+## Install GDebi Package Manager:
 
 :: Install
 ```powershell
@@ -138,7 +138,7 @@ sudo apt-get install gdebi
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Install WGET Package Manager: </style>
+## Install WGET Package Manager:
 
 :: Install
 ```powershell
@@ -148,7 +148,7 @@ sudo apt install wget
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Install File-Roller Archive Manager: </style>
+## Install File-Roller Archive Manager:
 
 :: Install
 ```powershell
@@ -158,7 +158,7 @@ sudo apt-get install unrar unace unrar p7zip zip unzip p7zip-full p7zip-rar file
 
 
 <br/><br/><br/>
-## <span style="color:blue"> Macbook - Install WiFi Adapter B43 Firmware: </style>
+## Macbook - Install WiFi Adapter B43 Firmware:
 <br/>
 This is required inorder for the internal WiFi adapter to work.
 
@@ -167,7 +167,7 @@ sudo apt-get install firmware-b43-installer
 ```
 <br/><br/><br/>
 
-## <span style="color:blue"> Macbook - Disable Lid Switch: </style>
+## Macbook - Disable Lid Switch:
 <br/>
 This will prevent the machine from shutting down or going to sleep when the lid is closed.
 <br/><br/>
@@ -186,7 +186,7 @@ HandleLidSwitchDocked=ignore
 
 
 <br/><br/><br/>
-## <span style="color:blue"> Alfa AWUS036ACH External WiFi Adapter - Install Driver: </style>
+## Alfa AWUS036ACH External WiFi Adapter - Install Driver:
 <br/>
 
 :: Install
@@ -226,7 +226,7 @@ Plug in WiFi adapter
 <br/><br/><br/>
 
 
-## <span style="color:blue"> Install Visual Studio Code: </style>
+## Install Visual Studio Code:
 
 :: Google “vs code download”<br/>
 :: Choose Debian architecture<br/>
@@ -242,7 +242,7 @@ sudo apt install ./code_1.74.0-1670260027_amd64.deb
 <br/><br/><br/>
 
 
-## <span style="color:blue"> Install Tor Browser: </style>
+## Install Tor Browser:
 
 :: Install
 ```powershell
@@ -260,7 +260,7 @@ torbrowser-launcher
 <br/><br/><br/>
 
 
-## <span style="color:blue"> Install Konsole Multiplexer: </style>
+## Install Konsole Multiplexer:
 
 :: Install
 ```powershell
@@ -269,7 +269,7 @@ sudo apt-get install konsole -y
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Install a terminator multiplexer: </style>
+## Install a terminator multiplexer:
 
 :: Install Terminator
 ```powershell
@@ -301,9 +301,9 @@ cd terminator
 
 
 
-## <span style="color:blue"> Install: OpenVas Scanner </style>
+## Install: OpenVas Scanner
 
-#### <span style="color:red"> -- Install and run as root -- </style>
+#### -- Install and run as root --
 
 <br/><br/>
 :: Installation
@@ -433,7 +433,7 @@ sudo rm -rf /var/lib/gvm/
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Install HTOP interactive process viewer: </style>
+## Install HTOP interactive process viewer:
 
 :: Install HTOP and suggested packages
 ```powershell
@@ -458,7 +458,7 @@ control-z
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Install Python: </style>
+## Install Python:
 
 :: Install
 Look into installing the latest version
@@ -466,7 +466,7 @@ Look into installing the latest version
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Install Java: </style>
+## Install Java:
 
 :: Install
 ```powershell
@@ -476,7 +476,7 @@ sudo apt install default-jdk
 <br/><br/><br/>
 
 
-## <span style="color:blue"> Install VLC Media Player: </style>
+## Install VLC Media Player:
 
 :: Install
 ```powershell
@@ -487,7 +487,7 @@ sudo apt install vlc
 <br/><br/><br/>
 
 
-## <span style="color:blue"> Install Lee Barid Discover Script (Automates several passive and active penetration testing tasks): </style>
+## Install Lee Barid Discover Script (Automates several passive and active penetration testing tasks):
 
 :: Source
 https://alphacybersecurity.tech/how-to-install-tools-to-kali-linux/
@@ -496,7 +496,7 @@ https://alphacybersecurity.tech/how-to-install-tools-to-kali-linux/
 This will be installed in the root of the user folder
 <br/><br/>
 
-#### <span style="color:red"> -- Install and run as root -- </style>
+#### -- Install and run as root --
 
 ```
 sudo apt-get update && sudo apt-get upgrade
@@ -519,7 +519,7 @@ cd discover
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Install Google Chrome: </style>
+## Install Google Chrome:
 
 :: Install
 Follow Google’s instructions on the web.
@@ -596,7 +596,7 @@ dpkg -list | grep google
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Install Daniel Miessler’s SecLists (One of the more popular wordlists) </style>
+## Install Daniel Miessler’s SecLists (One of the more popular wordlists)
 
 :: Source
 https://alphacybersecurity.tech/how-to-install-tools-to-kali-linux/
@@ -625,7 +625,7 @@ sudo apt -y install seclists
 <br/><br/><br/>
 
 
-## <span style="color:blue"> Install: Seahorse (Password & Key Manager) </style>
+## Install: Seahorse (Password & Key Manager)
 
 :: Install
 ```powershell
@@ -634,7 +634,7 @@ sudo apt-get install seahorse -y
 
 <br/><br/><br/>
 
-## <span style="color:blue"> Install: tilix (Multiplexer) </style>
+## Install: tilix (Multiplexer)
 
 :: Install
 ```powershell
@@ -644,7 +644,7 @@ sudo apt-get install tilix -y
 <br/><br/><br/>
 
 
-## <span style="color:blue"> Create another SUDO user: </style>
+## Create another SUDO user:
 
 :: Add new user “<New User Name / New User Password>”
 ```powershell
@@ -664,7 +664,7 @@ su <New User Name>
 ```
 <br/><br/><br/>
 
-## <span style="color:blue"> Install Macbook Fan Daemon </style>
+## Install Macbook Fan Daemon
 
 mbpfan is a daemon that uses input from coretemp module and sets the fan speed using the applesmc module.
 This enhanced version assumes any number of processors and fans (max. 10).
