@@ -299,8 +299,14 @@ cd terminator
 
 <br/><br/><br/>
 
+## Install Remmina RDP Client:
 
+:: Install
+```powershell
+sudo apt-get install remmina -y
+```
 
+<br/><br/><br/>
 ## Install: OpenVas Scanner
 
 #### -- Install and run as root --
